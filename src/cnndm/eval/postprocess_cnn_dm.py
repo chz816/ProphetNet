@@ -7,6 +7,7 @@ import time
 import shutil
 from bs_pyrouge import Rouge155
 
+
 parser = argparse.ArgumentParser()
 parser.add_argument("--generated", type=str, help="generated output file.")
 parser.add_argument("--golden", type=str, help="Gold output file.")

@@ -4,3 +4,4 @@ nltk
 pytorch_transformers
 gdown
 wheel
+git+https://github.com/chz816/pyrouge.git
