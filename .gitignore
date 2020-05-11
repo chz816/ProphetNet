@@ -135,3 +135,6 @@ pretrain/
 .idea/
 
 .DS_store
+
+google-asr/
+paper-draft/
