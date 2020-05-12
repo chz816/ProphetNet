@@ -22,17 +22,18 @@ class HelloFlow(FlowSpec):
     @step
     def preprocess(self):
         """
-        A step for metaflow to introduce itself.
-
+        A step for metaflow to preprocess the data
         """
         print("Hi! Start to preprocess the data!")
-        preocess('cnndm/original_data/dev.article', 'cnndm/prophetnet_tokenized/valid.src', keep_sep=False)
-        preocess('cnndm/original_data/dev.summary', 'cnndm/prophetnet_tokenized/valid.tgt', keep_sep=True)
-        preocess('cnndm/original_data/test.article', 'cnndm/prophetnet_tokenized/test.src', keep_sep=False)
-        preocess('cnndm/original_data/test.summary', 'cnndm/prophetnet_tokenized/test.tgt', keep_sep=True)
-        preocess('cnndm/original_data/training.article', 'cnndm/prophetnet_tokenized/train.src', keep_sep=False)
-        preocess('cnndm/original_data/training.summary', 'cnndm/prophetnet_tokenized/train.tgt', keep_sep=True)
+
+        preocess('./data/cnndm_data/org_data/dev.article', './data/cnndm_data/valid.src', keep_sep=False)
+        preocess('./data/cnndm_data/org_data/dev.summary', './data/cnndm_data/valid.tgt', keep_sep=True)
+        preocess('./data/cnndm_data/org_data/test.article', './data/cnndm_data/test.src', keep_sep=False)
+        preocess('./data/cnndm_data/org_data/test.summary', './data/cnndm_data/test.tgt', keep_sep=True)
+        preocess('./data/cnndm_data/org_data/training.article', './data/cnndm_data/train.src', keep_sep=False)
+        preocess('./data/cnndm_data/org_data/training.summary', './data/cnndm_data/train.tgt', keep_sep=True)
         self.next(self.binary)
+
     @step
     def binary(self):
         """
