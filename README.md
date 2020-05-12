@@ -20,6 +20,16 @@ $ pip install -r requirements.txt
 
 
 
+## Metaflow
+
+Update: We can also use Metaflow to execute the whole process, by running:
+
+```bash
+$ python prophetnet-metaflow.py run
+```
+
+
+
 ## Data - CNN/Daily Mail
 
 ### Download
